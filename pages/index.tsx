@@ -5,7 +5,7 @@ export default function Home() {
 
   const isAuthenticated = false;
 
-  if (isAuthenticated) return <Login />
+  if (!isAuthenticated) return <Login />
 
   return (
     <div className="h-screen">
