@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
+import { useMoralis } from 'react-moralis'
 
 export const Login = () => {
+
+ const { authenticate } = useMoralis();
+
  return (
   <div className="bg-black relative">
    <h1>I'm the login screen</h1>
