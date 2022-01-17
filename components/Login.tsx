@@ -8,7 +8,7 @@ export const Login = () => {
    <div className="flex flex-col absolute z-50 h-4/6 w-full items-center justify-center space-y-4">
     <Image className="object-cover rounded-full" src="https://avatars.githubusercontent.com/u/66319691?v=4" height={200} width={200}/>
 
-    <button>Login to the METAVERSE</button>
+    <button className="bg-slate-700 rounded-lg p-5 font-bold animate-pulse text-white">Login to the METAVERSE</button>
    </div>
 
    <div className="w-full h-screen">
