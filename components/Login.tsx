@@ -7,8 +7,10 @@ export const Login = () => {
    <h1>I'm the login screen</h1>
    <div>
     {/* Papafam Logo */}
+    <Image src="https://links.papareact.com/3pi" height={200} width={200}/>
 
     {/* Login button */}
+    <button>Login to the METAVERSE</button>
    </div>
 
    <div className="w-full h-screen">
