@@ -5,6 +5,8 @@ export default function Home() {
 
   const isAuthenticated = false;
 
+  if (isAuthenticated) return <Login />
+
   return (
     <div className="h-screen">
       <Head>
@@ -12,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Login/>
+    <h1>Welcome to the APP</h1> 
     </div>
   )
 }
