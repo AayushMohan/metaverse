@@ -19,7 +19,9 @@ const Header = () => {
 
         <div>
           {/* Avatar */}
-          <Avatar />
+          <div className="relative h-48 w-48 lg: mx-auto border-pink-500 border-8 rounded-full">
+            <Avatar logoutOnPress />
+          </div>
 
           {/* Welcome Message */}
           {/* username */}
