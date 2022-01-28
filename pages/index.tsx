@@ -20,6 +20,7 @@ export default function Home() {
           {/* Header */}
           <Header />
           {/* Messages */}
+          <div></div>
         </div>
       </div>
 
