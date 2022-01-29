@@ -17,7 +17,7 @@ export const Login = () => {
         />
 
         <button
-          onClick={() => authenticate}
+          onClick={authenticate}
           className="bg-slate-700 rounded-lg p-5 font-bold animate-pulse text-white"
         >
           Login to the METAVERSE
