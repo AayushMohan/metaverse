@@ -1,9 +1,14 @@
 import Image from "next/image";
 import { useMoralis } from "react-moralis";
 
-const Avatar = ({ username, logoutOnPress }) => {
+const Avatar = ({
+  username,
+  logoutOnPress,
+}: {
+  username: any;
+  logoutOnPress: any;
+}) => {
   const { user, logout } = useMoralis();
-
   return (
     <Image
       className="rounded-full bg-black cursor-pointer hover:opacity-75"
