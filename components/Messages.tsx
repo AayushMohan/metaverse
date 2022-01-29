@@ -15,7 +15,7 @@ const Messages = () => {
 
       <div>{/* Each Message */}</div>
 
-      <div>
+      <div className="flex justify-center">
         <SendMessage />
       </div>
 
