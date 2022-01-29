@@ -1,3 +1,4 @@
+import { error } from "console";
 import React, { useState } from "react";
 import { useMoralis } from "react-moralis";
 
@@ -8,6 +9,26 @@ const SendMessage = () => {
     e.preventDefault();
 
     if (!message) return;
+
+    const Messages = Moralis.Object.extend("Messages");
+    const messages = new Messages();
+
+    messages
+      .save({
+        message: message,
+        username: user?.getUsername(),
+        ethAddress: user?.get("ethAddress"),
+      })
+      .then(
+        (message) => {
+          // The object was saved successfully.
+        },
+        (error) => {
+          // The save failed.
+          // error is a Moralis.Error with an error code and message.
+          console.log(error.message);
+        }
+      );
   };
 
   return (
