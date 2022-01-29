@@ -8,7 +8,7 @@ const Avatar = ({ username, logoutOnPress }) => {
     <Image
       className="rounded-full bg-black cursor-pointer hover:opacity-75"
       src={`https://avatars.dicebear.com/api/pixel-art/${
-        username || user.get("username")
+        username || user?.get("username")
       }.svg`}
       onClick={() => logoutOnPress && logout()}
       layout="fill"
