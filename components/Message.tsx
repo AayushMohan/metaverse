@@ -1,4 +1,5 @@
 import React from "react";
+import TimeAgo from "timeago-react";
 import { useMoralis } from "react-moralis";
 import Avatar from "./Avatar";
 
@@ -9,7 +10,7 @@ const Message = ({ message }) => {
 
   return (
     <div
-      className={`flex items-end space-x-2 relative ${
+      className={`flex items-end space-x-2 relative lg:m-10 ${
         isUserMessage && "justify-end"
       }`}
     >
@@ -27,10 +28,16 @@ const Message = ({ message }) => {
         <p>{message.get("message")}</p>
       </div>
       {/* TimeAgo stamp */}
+      <TimeAgo
+        className={`text-[10px] italic text-gray-400 ${
+          isUserMessage && "order-first pr-1"
+        }`}
+        datetime={message.createdAt}
+      />
 
       <p
         className={`absolute -bottom-5 text-xs ${
-          isUserMessage ? "text-pink-300" : "text-blue-4 00"
+          isUserMessage ? "text-pink-300" : "text-blue-400"
         }`}
       >
         {message.get("username")}
