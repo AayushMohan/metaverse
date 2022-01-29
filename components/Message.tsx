@@ -26,6 +26,15 @@ const Message = ({ message }) => {
       >
         <p>{message.get("message")}</p>
       </div>
+      {/* TimeAgo stamp */}
+
+      <p
+        className={`absolute -bottom-5 text-xs ${
+          isUserMessage ? "text-pink-300" : "text-blue-4 00"
+        }`}
+      >
+        {message.get("username")}
+      </p>
     </div>
   );
 };
