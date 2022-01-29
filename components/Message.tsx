@@ -1,5 +1,6 @@
 import React from "react";
 import { useMoralis } from "react-moralis";
+import Avatar from "./Avatar";
 
 const Message = ({ message }) => {
   const { user } = useMoralis();
@@ -12,6 +13,10 @@ const Message = ({ message }) => {
         isUserMessage && "justify-end"
       }`}
     >
+      <div className={`relative h-8 w-8 ${isUserMessage && "order-last ml-2"}`}>
+        <Avatar username={message.get("username")} />
+      </div>
+
       <div
         className={`flex space-x-4 p-3 rounded-lg ${
           isUserMessage
