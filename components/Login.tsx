@@ -3,7 +3,7 @@ import React from "react";
 import { useMoralis } from "react-moralis";
 
 export const Login = () => {
-  const { authenticate } = useMoralis();
+  const { authenticate, isInitializing } = useMoralis();
 
   return (
     <div className="bg-black relative">
