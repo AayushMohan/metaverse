@@ -17,7 +17,7 @@ const Messages = () => {
       <div>{/* Each Message */}</div>
 
       <div className="flex justify-center">
-        <SendMessage />
+        <SendMessage endOfMessagesRef={endOfMessageRef} />
       </div>
 
       <div ref={endOfMessageRef} className="text-center text-gray-400 mt-5">
